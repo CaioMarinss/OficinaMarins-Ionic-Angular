@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'carros/alterar-carro/:id',
+    loadChildren: () => import('./carros/alterar-carro/alterar-carro.module').then( m => m.AlterarCarroPageModule)
+  },
+  {
+    path: 'carros/cadastrar-carro',
+    loadChildren: () => import('./carros/cadastrar-carro/cadastrar-carro.module').then( m => m.CadastrarCarroPageModule)
+  },
 ];
 
 @NgModule({
